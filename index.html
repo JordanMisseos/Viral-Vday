@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>For My Valentine ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Fireworks canvas (hidden until YES) -->
+  <canvas id="fireworksCanvas"></canvas>
+
+  <div class="container">
+    <h1 id="question">Will you be my Valentine? 💌</h1>
+
+    <!-- Photo area (hidden until YES) -->
+    <div id="photoWrap" class="photoWrap hidden">
+      <img id="usPhoto" src="us.jpg" alt="Us" />
+      <p class="photoCaption">Us. Soon. ❤️</p>
+    </div>
+
+    <!-- Countdown (hidden until YES) -->
+    <div id="countdownWrap" class="countdownWrap hidden">
+      <h2>Countdown to our belated Valentine’s date 💘</h2>
+      <div class="countdown" id="countdown">--d --h --m --s</div>
+      <div class="dateLine" id="dateLine"></div>
+    </div>
+
+    <div class="buttons" id="buttons">
+      <button id="yesBtn">YES 💖</button>
+      <button id="noBtn">No 😒</button>
+    </div>
+
+    <!-- After YES message -->
+    <p id="afterYes" class="afterYes hidden"></p>
+  </div>
+
+  <div id="hearts"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
