@@ -12,7 +12,7 @@ const dateLine = document.getElementById("dateLine");
 const hearts = document.getElementById("hearts");
 
 // ---------- CONFIG (change these) ----------
-const HER_NAME = "my love"; // change to her name if you want
+const HER_NAME = "my Aurane"; // change to her name if you want
 // AU format assumed: 11/3 = 11 March 2026.
 // Set your date time here (Melbourne local time in the user's browser).
 const DATE_TIME_LOCAL = "2026-03-11T19:00:00"; // <-- change time if needed
