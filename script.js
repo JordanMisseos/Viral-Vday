@@ -19,22 +19,31 @@ const DATE_TIME_LOCAL = "2026-03-11T19:00:00"; // <-- change time if needed
 // -------------------------------------------
 
 // Runaway "No" (desktop hover + mobile touch)
+// Make button move around screen but stay visible
 function moveNoButton() {
-  const pad = 20;
-  const btnW = noBtn.offsetWidth || 100;
-  const btnH = noBtn.offsetHeight || 50;
+  const padding = 20;
 
-  const maxX = window.innerWidth - btnW - pad;
-  const maxY = window.innerHeight - btnH - pad;
+  const btnWidth = noBtn.offsetWidth;
+  const btnHeight = noBtn.offsetHeight;
 
-  const x = Math.max(pad, Math.random() * maxX);
-  const y = Math.max(pad, Math.random() * maxY);
+  const maxX = window.innerWidth - btnWidth - padding;
+  const maxY = window.innerHeight - btnHeight - padding;
 
-  noBtn.style.left = x + "px";
-  noBtn.style.top = y + "px";
+  const randomX = Math.random() * maxX;
+  const randomY = Math.random() * maxY;
+
+  noBtn.style.position = "fixed";
+  noBtn.style.left = randomX + "px";
+  noBtn.style.top = randomY + "px";
 }
 
-noBtn.addEventListener("mouseover", moveNoButton);
+noBtn.addEventListener("mouseenter", moveNoButton);
+
+noBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  moveNoButton();
+});
+
 noBtn.addEventListener("touchstart", (e) => {
   e.preventDefault();
   moveNoButton();
